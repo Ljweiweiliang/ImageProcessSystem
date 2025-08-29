@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageProcess</class>
+ <widget class="QMainWindow" name="ImageProcess">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1145</width>
+    <height>902</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图像处理系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="Btn_select_pic">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择图片</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pic_src">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>511</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pic_dst">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>170</y>
+      <width>511</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Mean_Filter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>均值滤波</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Gaussian_Filter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>高斯滤波</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1145</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Btn_select_pic</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_select_pic_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_Mean_Filter</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_select_pic_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_Gaussian_Filter</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_Gaussian_Filter_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>On_Btn_select_pic_clicked()</slot>
+  <slot>On_Btn_Mean_Filter_clicked()</slot>
+  <slot>On_Btn_Gaussian_Filter_clicked()</slot>
+ </slots>
+</ui>
