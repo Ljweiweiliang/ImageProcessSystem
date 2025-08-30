@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\AAA个人项目\python_vscode\ImageProcess.ui'
+# Form implementation generated from reading ui file 'd:\AAA个人项目\ImageProcessSystem\ImageProcess.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,31 +14,83 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ImageProcess(object):
     def setupUi(self, ImageProcess):
         ImageProcess.setObjectName("ImageProcess")
-        ImageProcess.resize(1145, 902)
+        ImageProcess.resize(1500, 1107)
         self.centralwidget = QtWidgets.QWidget(ImageProcess)
         self.centralwidget.setObjectName("centralwidget")
         self.Btn_select_pic = QtWidgets.QPushButton(self.centralwidget)
         self.Btn_select_pic.setGeometry(QtCore.QRect(20, 10, 75, 23))
         self.Btn_select_pic.setObjectName("Btn_select_pic")
         self.pic_src = QtWidgets.QLabel(self.centralwidget)
-        self.pic_src.setGeometry(QtCore.QRect(20, 170, 511, 541))
+        self.pic_src.setGeometry(QtCore.QRect(140, 50, 800, 800))
         self.pic_src.setStyleSheet("border: 1px solid black;")
         self.pic_src.setText("")
         self.pic_src.setObjectName("pic_src")
-        self.pic_dst = QtWidgets.QLabel(self.centralwidget)
-        self.pic_dst.setGeometry(QtCore.QRect(590, 170, 511, 541))
-        self.pic_dst.setStyleSheet("border: 1px solid black;")
-        self.pic_dst.setText("")
-        self.pic_dst.setObjectName("pic_dst")
         self.Btn_Mean_Filter = QtWidgets.QPushButton(self.centralwidget)
         self.Btn_Mean_Filter.setGeometry(QtCore.QRect(20, 40, 75, 23))
         self.Btn_Mean_Filter.setObjectName("Btn_Mean_Filter")
         self.Btn_Gaussian_Filter = QtWidgets.QPushButton(self.centralwidget)
         self.Btn_Gaussian_Filter.setGeometry(QtCore.QRect(20, 70, 75, 23))
         self.Btn_Gaussian_Filter.setObjectName("Btn_Gaussian_Filter")
+        self.comboBox_method = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_method.setGeometry(QtCore.QRect(270, 10, 141, 22))
+        self.comboBox_method.setObjectName("comboBox_method")
+        self.comboBox_method.addItem("")
+        self.comboBox_method.addItem("")
+        self.comboBox_method.addItem("")
+        self.comboBox_method.addItem("")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(180, 10, 91, 21))
+        self.label.setObjectName("label")
+        self.lineEdit_xy = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_xy.setGeometry(QtCore.QRect(1050, 70, 141, 20))
+        self.lineEdit_xy.setObjectName("lineEdit_xy")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(980, 70, 81, 16))
+        self.label_2.setObjectName("label_2")
+        self.lineEdit_rgb = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_rgb.setGeometry(QtCore.QRect(1050, 100, 141, 20))
+        self.lineEdit_rgb.setObjectName("lineEdit_rgb")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(980, 100, 81, 16))
+        self.label_3.setObjectName("label_3")
+        self.Btn_undo = QtWidgets.QPushButton(self.centralwidget)
+        self.Btn_undo.setGeometry(QtCore.QRect(20, 130, 75, 23))
+        self.Btn_undo.setObjectName("Btn_undo")
+        self.Btn_redo = QtWidgets.QPushButton(self.centralwidget)
+        self.Btn_redo.setGeometry(QtCore.QRect(20, 160, 75, 23))
+        self.Btn_redo.setObjectName("Btn_redo")
+        self.Slider_bright = QtWidgets.QSlider(self.centralwidget)
+        self.Slider_bright.setGeometry(QtCore.QRect(10, 300, 111, 22))
+        self.Slider_bright.setMinimum(-99)
+        self.Slider_bright.setOrientation(QtCore.Qt.Horizontal)
+        self.Slider_bright.setObjectName("Slider_bright")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(20, 270, 81, 16))
+        self.label_4.setObjectName("label_4")
+        self.Slider_contrast = QtWidgets.QSlider(self.centralwidget)
+        self.Slider_contrast.setGeometry(QtCore.QRect(10, 380, 111, 22))
+        self.Slider_contrast.setMinimum(0)
+        self.Slider_contrast.setMaximum(30)
+        self.Slider_contrast.setSingleStep(1)
+        self.Slider_contrast.setProperty("value", 10)
+        self.Slider_contrast.setSliderPosition(10)
+        self.Slider_contrast.setOrientation(QtCore.Qt.Horizontal)
+        self.Slider_contrast.setObjectName("Slider_contrast")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(20, 350, 81, 16))
+        self.label_5.setObjectName("label_5")
+        self.Btn_invertcolor = QtWidgets.QPushButton(self.centralwidget)
+        self.Btn_invertcolor.setGeometry(QtCore.QRect(20, 100, 75, 23))
+        self.Btn_invertcolor.setObjectName("Btn_invertcolor")
+        self.Btn_change_size = QtWidgets.QPushButton(self.centralwidget)
+        self.Btn_change_size.setGeometry(QtCore.QRect(20, 190, 75, 23))
+        self.Btn_change_size.setObjectName("Btn_change_size")
+        self.Btn_rotate = QtWidgets.QPushButton(self.centralwidget)
+        self.Btn_rotate.setGeometry(QtCore.QRect(20, 220, 75, 23))
+        self.Btn_rotate.setObjectName("Btn_rotate")
         ImageProcess.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ImageProcess)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1145, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1500, 23))
         self.menubar.setObjectName("menubar")
         ImageProcess.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(ImageProcess)
@@ -47,8 +99,16 @@ class Ui_ImageProcess(object):
 
         self.retranslateUi(ImageProcess)
         self.Btn_select_pic.clicked.connect(ImageProcess.On_Btn_select_pic_clicked) # type: ignore
-        self.Btn_Mean_Filter.clicked.connect(ImageProcess.On_Btn_select_pic_clicked) # type: ignore
         self.Btn_Gaussian_Filter.clicked.connect(ImageProcess.On_Btn_Gaussian_Filter_clicked) # type: ignore
+        self.comboBox_method.currentTextChanged['QString'].connect(ImageProcess.On_comboBox_method_changed) # type: ignore
+        self.Btn_Mean_Filter.clicked.connect(ImageProcess.On_Btn_Mean_Filter_clicked) # type: ignore
+        self.Btn_undo.clicked.connect(ImageProcess.On_Btn_undo_clicked) # type: ignore
+        self.Btn_redo.clicked.connect(ImageProcess.On_Btn_redo_clicked) # type: ignore
+        self.Slider_bright.valueChanged['int'].connect(ImageProcess.On_Slider_bright_changed) # type: ignore
+        self.Slider_contrast.valueChanged['int'].connect(ImageProcess.On_Slider_contrast_changed) # type: ignore
+        self.Btn_invertcolor.clicked.connect(ImageProcess.On_Btn_invertcolor_clicked) # type: ignore
+        self.Btn_change_size.clicked.connect(ImageProcess.On_Btn_change_size_clicked) # type: ignore
+        self.Btn_rotate.clicked.connect(ImageProcess.On_Btn_rotate_clicked) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(ImageProcess)
 
     def retranslateUi(self, ImageProcess):
@@ -57,3 +117,18 @@ class Ui_ImageProcess(object):
         self.Btn_select_pic.setText(_translate("ImageProcess", "选择图片"))
         self.Btn_Mean_Filter.setText(_translate("ImageProcess", "均值滤波"))
         self.Btn_Gaussian_Filter.setText(_translate("ImageProcess", "高斯滤波"))
+        self.comboBox_method.setCurrentText(_translate("ImageProcess", "OpenCV"))
+        self.comboBox_method.setItemText(0, _translate("ImageProcess", "OpenCV"))
+        self.comboBox_method.setItemText(1, _translate("ImageProcess", "Torch"))
+        self.comboBox_method.setItemText(2, _translate("ImageProcess", "Cuda"))
+        self.comboBox_method.setItemText(3, _translate("ImageProcess", "OpenMp"))
+        self.label.setText(_translate("ImageProcess", "选择处理方式："))
+        self.label_2.setText(_translate("ImageProcess", "像素坐标："))
+        self.label_3.setText(_translate("ImageProcess", "像素颜色："))
+        self.Btn_undo.setText(_translate("ImageProcess", "撤销"))
+        self.Btn_redo.setText(_translate("ImageProcess", "还原"))
+        self.label_4.setText(_translate("ImageProcess", "亮度："))
+        self.label_5.setText(_translate("ImageProcess", "对比度："))
+        self.Btn_invertcolor.setText(_translate("ImageProcess", "反色"))
+        self.Btn_change_size.setText(_translate("ImageProcess", "缩放"))
+        self.Btn_rotate.setText(_translate("ImageProcess", "旋转"))

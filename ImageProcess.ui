@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1145</width>
-    <height>902</height>
+    <width>1500</width>
+    <height>1107</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,29 +30,10 @@
    <widget class="QLabel" name="pic_src">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>511</width>
-      <height>541</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border: 1px solid black;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pic_dst">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>170</y>
-      <width>511</width>
-      <height>541</height>
+      <x>140</x>
+      <y>50</y>
+      <width>800</width>
+      <height>800</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -91,13 +72,240 @@
      <string>高斯滤波</string>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBox_method">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>OpenCV</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>OpenCV</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Torch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cuda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>OpenMp</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择处理方式：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_xy">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>70</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>70</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>像素坐标：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_rgb">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>100</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>100</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>像素颜色：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_undo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>撤销</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_redo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>还原</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Slider_bright">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-99</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>亮度：</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Slider_contrast">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>对比度：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_invertcolor">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>反色</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_change_size">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>缩放</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_rotate">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>旋转</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1145</width>
+     <width>1500</width>
      <height>23</height>
     </rect>
    </property>
@@ -123,22 +331,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>Btn_Mean_Filter</sender>
-   <signal>clicked()</signal>
-   <receiver>ImageProcess</receiver>
-   <slot>On_Btn_select_pic_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>42</x>
-     <y>73</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>50</x>
-     <y>110</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>Btn_Gaussian_Filter</sender>
    <signal>clicked()</signal>
    <receiver>ImageProcess</receiver>
@@ -154,10 +346,162 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox_method</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_comboBox_method_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_Mean_Filter</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_Mean_Filter_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_undo</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_undo_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_redo</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_redo_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_bright</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Slider_bright_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Slider_contrast</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Slider_contrast_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_invertcolor</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_invertcolor_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>12</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_change_size</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_change_size_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>19</x>
+     <y>241</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Btn_rotate</sender>
+   <signal>clicked()</signal>
+   <receiver>ImageProcess</receiver>
+   <slot>On_Btn_rotate_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>256</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>67</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>On_Btn_select_pic_clicked()</slot>
   <slot>On_Btn_Mean_Filter_clicked()</slot>
   <slot>On_Btn_Gaussian_Filter_clicked()</slot>
+  <slot>On_comboBox_method_changed()</slot>
+  <slot>On_Btn_undo_clicked()</slot>
+  <slot>On_Btn_redo_clicked()</slot>
+  <slot>On_Slider_bright_changed()</slot>
+  <slot>On_Slider_contrast_changed()</slot>
+  <slot>On_Btn_invertcolor_clicked()</slot>
+  <slot>On_Btn_change_size_clicked()</slot>
+  <slot>On_Btn_rotate_clicked()</slot>
  </slots>
 </ui>
