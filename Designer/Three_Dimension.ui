@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Three_Dimension</class>
+ <widget class="QWidget" name="Three_Dimension">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="pic_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>900</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid black;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Volume">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>90</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>体渲染</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Btn_Volume</sender>
+   <signal>clicked()</signal>
+   <receiver>Three_Dimension</receiver>
+   <slot>On_Btn_Volume_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1026</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>986</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>On_Btn_Volume_Clicked()</slot>
+ </slots>
+</ui>
